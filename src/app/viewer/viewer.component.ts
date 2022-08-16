@@ -51,7 +51,9 @@ export class ViewerComponent implements OnInit, AfterViewInit {
       const itemId = res?.hits?.[0]?.itemId?.hex;
 
       if (itemId != null) {
-        await selectItem(viewer, [itemId]);
+        await selectItem(viewer, {
+          query: { type: 'item-ids', itemIds: [itemId] },
+        });
       } else {
         await clearSelection(viewer);
       }
