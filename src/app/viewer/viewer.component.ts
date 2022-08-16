@@ -16,7 +16,17 @@ import { clearSelection, selectItem } from './operations';
   styleUrls: ['./viewer.component.css'],
 })
 export class ViewerComponent implements OnInit, AfterViewInit {
-  @Input() public src?: string;
+  /**
+   * The URN of the scene to load. Supports loading by a stream key and an
+   * optional scene view state.
+   *
+   * Examples:
+   *
+   *  * Load a scene: urn:vertexvis:stream-key:vpe5dKpDffDT8bLzhbP0S7Da2nN9-w-xgq6X
+   *  * Load a scene with a scene view state: urn:vertexvis:stream-key:vpe5dKpDffDT8bLzhbP0S7Da2nN9-w-xgq6X?scene-view-state=123
+   */
+  @Input() public src: string =
+    'urn:vertexvis:stream-key:vpe5dKpDffDT8bLzhbP0S7Da2nN9-w-xgq6X';
 
   @ViewChild('viewer') private viewer?: ElementRef<HTMLVertexViewerElement>;
 
@@ -37,7 +47,7 @@ export class ViewerComponent implements OnInit, AfterViewInit {
         'tap',
         this.handleTap(this.viewer?.nativeElement)
       );
-      this.viewer.nativeElement.featureLines = { width: 0.25 };
+      this.viewer.nativeElement.featureLines = { width: 0.5, color: '#444444' };
     }
   }
 
