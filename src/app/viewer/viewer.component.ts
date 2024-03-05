@@ -22,11 +22,11 @@ export class ViewerComponent implements OnInit, AfterViewInit {
    *
    * Examples:
    *
-   *  * Load a scene: urn:vertexvis:stream-key:hfmI8VBsIiMmO7THqdZdWO5Fhjqp_VDaee9e
-   *  * Load a scene with a scene view state: urn:vertexvis:stream-key:hfmI8VBsIiMmO7THqdZdWO5Fhjqp_VDaee9e?scene-view-state=123
+   *  * Load a scene: urn:vertexvis:stream-key:AH7v0jg5aN5_thkhU-XTzB_29aqW89EjyOH8
+   *  * Load a scene with a scene view state: urn:vertexvis:stream-key:AH7v0jg5aN5_thkhU-XTzB_29aqW89EjyOH8?scene-view-state=123
    */
   @Input() public src: string =
-    'urn:vertexvis:stream-key:hfmI8VBsIiMmO7THqdZdWO5Fhjqp_VDaee9e';
+    'urn:vertexvis:stream-key:AH7v0jg5aN5_thkhU-XTzB_29aqW89EjyOH8';
 
   @ViewChild('viewer') private viewer?: ElementRef<HTMLVertexViewerElement>;
 
