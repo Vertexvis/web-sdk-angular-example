@@ -36,7 +36,7 @@ export class ViewerComponent implements OnInit, AfterViewInit {
     const script = this.document.createElement('script');
     script.type = 'module';
     script.src =
-      'https://unpkg.com/@vertexvis/viewer@0.15.x/dist/viewer/viewer.esm.js';
+      'https://cdn.jsdelivr.net/npm/@vertexvis/viewer@0.15.x/dist/viewer/viewer.esm.js';
 
     this.document.body.append(script);
   }
