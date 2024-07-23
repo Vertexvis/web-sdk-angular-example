@@ -1,4 +1,4 @@
-@import url(https://unpkg.com/@vertexvis/viewer@0.15.x/dist/viewer/viewer.css);
+@import url(https://cdn.jsdelivr.net/npm/@vertexvis/viewer@0.15.x/dist/viewer/viewer.css);
 
 :host {
   width: 100%;
